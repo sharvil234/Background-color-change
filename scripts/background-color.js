@@ -25,18 +25,18 @@ window.onload = function(){
       Context.ctx.fillStyle = color;
       Context.ctx.fill();
 	  if(icounter == true){
-	  if (imax == true && i >= 0) {
-    i -= 5;
-    if (i == 0) {
+	  if (imax == true && i <= 255) {
+    i += 5;
+    if (i == 255) {
       imax = false;
 	  jcounter = true;
 	  
     }
   } else {
        imax = false
-       i += 5;
+       i -= 5;
 
-      if (i == 255) {
+      if (i == 0) {
         imax = true;
 		icounter = false;
 		jcounter = true;
